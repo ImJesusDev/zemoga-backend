@@ -61,3 +61,29 @@ Before deploying, configure Serverless CLI with the required [AWS credentials](h
 ```bash
 serverless deploy
 ```
+
+## Endpoints
+
+The api has the following endpoints:
+
+- POST /users : Creates a new user
+body:
+```json
+{
+  firstName: User's First Name
+  lastName: User's Last Name
+  username: Twitter username
+  title: User job title
+  photo: Url of user's photo
+  description: User's bio
+}
+```
+
+- GET /users/:userId : Get user by id
+- PUT /users/:userId : Update user
+
+- GET /recent-tweets : Return user recent tweets (5)
+query params:
+```
+username: Twitter username
+```
